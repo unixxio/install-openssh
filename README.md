@@ -44,6 +44,13 @@ Check OpenSSH version
 ```
 ssh -V
 ```
+### Add your SSH key to root user (can be any user)
+```
+mkdir -p /root/.ssh/
+echo "YOUR SSH KEY" >> /root/.ssh/authorized_keys
+chmod 600 /root/.ssh
+chmod 500 /root/.ssh/authorized_keys
+```
 
 **Tested on**
 * Debian 10 Buster
